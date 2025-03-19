@@ -1,0 +1,94 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaatabook Layout</title>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">Khaatabook</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisab</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="dateForm"> 
+            <h1>All Hisaab Kitaab</h1>
+
+            <% if(files.length>0){%>
+
+            <% files.forEach(function(files){%>
+               <div class="date-list">
+                    <div class="date-item">
+                        <span class="date"><%= files.split(".")[0] %></span>
+                        <div class="actions">
+                            <a href="" id="pencil"><i class="ri-pencil-line"></i></a>
+                            <a href="" id="delete"><i class="ri-delete-bin-6-line"></i></a>
+                            <!-- <button href="/edit/<%= files %>" type="button" class="edit-btn">✎</button>
+                            <button type="button" class="delete-btn">🗑</button> -->
+                        <!-- </div>
+                    </div>
+                    </div>
+            <%})%> 
+
+            <%}
+            else{%>
+                        <h1>Nothing is to show here for empty files</h1>
+            <%}
+            %> -->
+            
+
+        <!-- </form>
+    </main>
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaatabook</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Khaatabook</h1>
+        </div>
+        <div class="header-right">
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisaab</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>All Hisaab Kitaab</h2>
+        <% if(files.length>0){%>
+
+            <% files.forEach(function(file){%>
+                
+                            
+                <ul class="hisaab-list">
+                    <li class="hisaab-item">
+                        <span><%= file.split(".")[0] %></span>
+                        <a href="/hisaab/<%= file %>"><img src="/fonts/images (1).png" alt="arrow"></a> 
+                        <a href="/edit/<%= file %>"><img src="/fonts/images.png" alt="Edit"></a> 
+                        <a href="/delete/<%= file %>"><img src="/fonts/images (1).png" alt="Delete"></a> 
+                </ul>
+                       
+            <%})%> 
+
+            <%}
+            else{%>
+                        <h1>Nothing is to show here for empty files</h1>
+            <%}
+            %> 
+    </div>
+
+</body>
+</html>

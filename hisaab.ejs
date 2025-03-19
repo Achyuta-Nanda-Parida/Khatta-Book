@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hisaab Details</title>
+    <link rel="stylesheet" href="./css/style3.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Khaatabook</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/create">Create New Hisaab</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="hisaabDetailsForm">
+            <h1>hisaab of <span><%= filename.split(".")[0] %></span> date</h1>
+
+            <p><%= filedata %></p>
+
+            <button type="button" id="editHisaab">
+                <a href="/edit/<%= filename %>">Edit Hisaab</a>
+            </button>
+        </form>
+    </main>
+</body>
+</html>
